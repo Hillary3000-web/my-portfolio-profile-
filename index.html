@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hillary- Frontend Developer</title>
+    <title>Hillary - Frontend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="nav-container">
                 <div class="logo">Hillary Chukwuma Prince</div>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,13 +30,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="hero-title">
         <div class="container">
             <div class="hero-content">
                 <div class="profile-image">
-                    <i class="fas fa-user"></i>
+                    <img src="WhatsApp Image 2025-06-14 at 17.38.59_b643c81c.jpg" alt="Hillary Chukwuma Prince" loading="lazy">
                 </div>
-                <h1>Hillary Chukwuma Prince</h1>
+                <h1 id="hero-title">Hillary Chukwuma Prince</h1>
                 <p class="subtitle">Frontend Developer & Aspiring Full Stack Developer</p>
                 <p class="description">
                     Passionate about creating beautiful, functional web experiences with modern technologies. 
@@ -51,9 +57,9 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section" aria-labelledby="about-title">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" id="about-title">About Me</h2>
             <div class="about-content">
                 <div class="about-stats">
                     <div class="stat-item">
@@ -94,9 +100,9 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section id="skills" class="section" aria-labelledby="skills-title">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <h2 class="section-title" id="skills-title">Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
@@ -187,16 +193,16 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title" id="projects-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-globe"></i>
+                        <img src="placeholder-project1.jpg" alt="Interactive Website" loading="lazy">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title"> Interactive Website</h3>
+                        <h3 class="project-title">Interactive Website</h3>
                         <p class="project-description">
                             A modern, fully responsive website showcasing clean design principles and smooth animations.
                         </p>
@@ -210,7 +216,7 @@
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
                             </a>
-                            <a href="My-company/My-company.html" class="project-link">
+                            <a href="#" class="project-link" aria-label="GitHub repository (coming soon)">
                                 <i class="fab fa-github"></i>
                                 GitHub
                             </a>
@@ -219,7 +225,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-tasks"></i>
+                        <img src="placeholder-project2.jpg" alt="Task Management App" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Task Management App</h3>
@@ -232,11 +238,11 @@
                             <span class="tech-tag">HTML5</span>
                         </div>
                         <div class="project-links">
-                            <a href="my task-manager.html" class="project-link">
+                            <a href="my-task-manager.html" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
                             </a>
-                            <a href="my task-manager.html" class="project-link">
+                            <a href="#" class="project-link" aria-label="GitHub repository (coming soon)">
                                 <i class="fab fa-github"></i>
                                 GitHub
                             </a>
@@ -245,7 +251,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-calculator"></i>
+                        <img src="placeholder-project3.jpg" alt="Interactive Calculator" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Interactive Calculator</h3>
@@ -262,7 +268,7 @@
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
                             </a>
-                            <a href="calculator.html" class="project-link">
+                            <a href="#" class="project-link" aria-label="GitHub repository (coming soon)">
                                 <i class="fab fa-github"></i>
                                 GitHub
                             </a>
@@ -274,9 +280,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" aria-labelledby="contact-title">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title" id="contact-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -285,7 +291,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>princehillary813@gmail.com</p>
+                            <p><a href="mailto:princehillary813@gmail.com">princehillary813@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -294,7 +300,7 @@
                         </div>
                         <div>
                             <h4>Phone</h4>
-                            <p>+234 912 416 8036</p>
+                            <p><a href="tel:+2349124168036">+234 912 416 8036</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -312,26 +318,26 @@
                         </div>
                         <div>
                             <h4>GitHub</h4>
-                            <p>i'll provide my github url soon</p>
+                            <p>Coming soon</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" aria-label="Contact form">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" required aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required aria-required="true"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-paper-plane"></i>
@@ -343,28 +349,26 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link">
+                <a href="#" class="social-link" aria-label="GitHub (coming soon)">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="#" class="social-link">
+                <a href="#" class="social-link" aria-label="LinkedIn (coming soon)">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#" class="social-link">
+                <a href="#" class="social-link" aria-label="Twitter (coming soon)">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="social-link">
+                <a href="#" class="social-link" aria-label="Instagram (coming soon)">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
-            <p>&copy; 2025 Hillary Chukwuma Prince. All rights reserved.</p>
+            <p>© 2025 Hillary Chukwuma Prince. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <!--Scroll to top button
-    <button id="scrollToTopBtn" title="Go to top">↑</button>-->
 </body>
 </html>
