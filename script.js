@@ -84,9 +84,28 @@
         window.addEventListener('load', function() {
             setTimeout(typeWriter, 1000);
         });
+        // Get the button 
+       // const scrollToTopBtn = document.getElementById("scrollToTheBtn");
+        // Show btn when scrolling down we jave 
+       // window.onscroll = function() {
+       //     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+       //         scrollToTopBtn.style.display = "block";
+       //     }
+       //     else {
+       //         scrollToTopBtn.style.display = "none";
+       //     }
+        //};
 
-         document.addEventListener('DOMContentLoaded', () => {
-          const hamburger = document.querySelector('.hamburger');
+        // Scroll to the top when the btn is clicked
+        //scrollToTopBtn.addEventListener("click", () => {
+        //    window.scrollTo({
+         //       top: 0, behavior: "smooth"
+        //    });
+       // });
+
+
+       document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
