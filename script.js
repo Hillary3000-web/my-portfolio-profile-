@@ -59,7 +59,7 @@
             sectionObserver.observe(section);
         });
 
-        // Form submission (you'll need to implement backend handling)
+        // Form submission (backend handling for my future self)
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your message! I\'ll get back to you soon.');
@@ -80,29 +80,11 @@
             }
         }
         
-        // Start typing effect after page loads
+       
+     // Start typing effect after page loads
         window.addEventListener('load', function() {
             setTimeout(typeWriter, 1000);
         });
-        // Get the button 
-       // const scrollToTopBtn = document.getElementById("scrollToTheBtn");
-        // Show btn when scrolling down we jave 
-       // window.onscroll = function() {
-       //     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-       //         scrollToTopBtn.style.display = "block";
-       //     }
-       //     else {
-       //         scrollToTopBtn.style.display = "none";
-       //     }
-        //};
-
-        // Scroll to the top when the btn is clicked
-        //scrollToTopBtn.addEventListener("click", () => {
-        //    window.scrollTo({
-         //       top: 0, behavior: "smooth"
-        //    });
-       // });
-
 
        document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
