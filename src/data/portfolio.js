@@ -2,8 +2,8 @@
 
 export const personalInfo = {
   name: "Hillary Chukwuma Prince",
-  role: "Full Stack Developer",
-  tagline: "Full Stack Developer",
+  role: "Full Stack Web Developer",
+  tagline: "",
   description: "Passionate about creating beautiful, functional web experiences with modern technologies. I specialize in both frontend and backend development, building complete web applications from start to finish.",
   email: "princehillary813@gmail.com",
   phone: "+234 912 416 8036",
@@ -15,12 +15,12 @@ export const personalInfo = {
 
 export const aboutContent = {
   paragraphs: [
-    "Hello! I'm a passionate full stack developer with a strong foundation in modern web technologies. My journey in web development began with curiosity about how websites work, and it has evolved into a dedicated pursuit of creating exceptional digital experiences.",
-    "I specialize in building responsive, user-friendly interfaces using HTML, CSS, JavaScript, and React on the frontend, while also developing robust backend systems with Python and Django.",
-    "I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends. When I'm not coding, you'll find me learning new technologies or working on personal projects that challenge me to grow as a developer."
+    "Hello! I'm a dedicated Full Stack Web Developer with expertise in building complete web applications from frontend to backend. My journey in web development began with curiosity about how websites work, and it has evolved into a passion for creating exceptional digital experiences.",
+    "On the frontend, I build responsive, user-friendly interfaces using HTML, CSS, JavaScript, React, and Next.js. On the backend, I develop robust and scalable APIs and server-side applications with Python and Django.",
+    "I believe in writing clean, maintainable code and following best practices in software development. I'm proficient with Git and GitHub for version control and collaboration. When I'm not coding, you'll find me learning new technologies or working on personal projects that challenge me to grow as a developer."
   ],
   stats: [
-    { number: "2+", label: "Years Learning" },
+    { number: "2+", label: "Years Experience" },
     { number: "5+", label: "Projects Built" },
     { number: "8+", label: "Technologies" },
     { number: "100%", label: "Dedication" }

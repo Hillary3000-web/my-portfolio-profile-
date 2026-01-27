@@ -1,4 +1,4 @@
-# Hillary Chukwuma Prince - Full Stack Developer Portfolio
+# Hillary Chukwuma Prince - Full Stack Web Developer Portfolio
 
 ![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-blue?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react)

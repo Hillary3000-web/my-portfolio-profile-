@@ -90,7 +90,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                    {personalInfo.role} & {personalInfo.tagline}
+                    {personalInfo.role}
                 </motion.p>
 
                 {/* Description */}
