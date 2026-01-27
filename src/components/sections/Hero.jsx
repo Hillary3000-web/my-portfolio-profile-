@@ -65,9 +65,11 @@ export default function Hero() {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <div className={styles.profilePlaceholder}>
-                            {personalInfo.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                        </div>
+                        <img
+                            src="/profile.jpg"
+                            alt={personalInfo.name}
+                            className={styles.profileImg}
+                        />
                     </motion.div>
                 </motion.div>
 

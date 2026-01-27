@@ -2,9 +2,9 @@
 
 export const personalInfo = {
   name: "Hillary Chukwuma Prince",
-  role: "Frontend Developer",
-  tagline: "Aspiring Full Stack Developer",
-  description: "Passionate about creating beautiful, functional web experiences with modern technologies. I specialize in frontend development while expanding my skills toward full-stack development.",
+  role: "Full Stack Developer",
+  tagline: "Full Stack Developer",
+  description: "Passionate about creating beautiful, functional web experiences with modern technologies. I specialize in both frontend and backend development, building complete web applications from start to finish.",
   email: "princehillary813@gmail.com",
   phone: "+234 912 416 8036",
   location: "Port Harcourt, Nigeria",
@@ -15,14 +15,14 @@ export const personalInfo = {
 
 export const aboutContent = {
   paragraphs: [
-    "Hello! I'm a passionate frontend developer with a strong foundation in modern web technologies. My journey in web development began with curiosity about how websites work, and it has evolved into a dedicated pursuit of creating exceptional digital experiences.",
-    "I specialize in building responsive, user-friendly interfaces using HTML, CSS, and JavaScript. Currently, I'm expanding my skillset to become a full-stack developer by learning Python and exploring backend technologies.",
+    "Hello! I'm a passionate full stack developer with a strong foundation in modern web technologies. My journey in web development began with curiosity about how websites work, and it has evolved into a dedicated pursuit of creating exceptional digital experiences.",
+    "I specialize in building responsive, user-friendly interfaces using HTML, CSS, JavaScript, and React on the frontend, while also developing robust backend systems with Python and Django.",
     "I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends. When I'm not coding, you'll find me learning new technologies or working on personal projects that challenge me to grow as a developer."
   ],
   stats: [
     { number: "2+", label: "Years Learning" },
     { number: "5+", label: "Projects Built" },
-    { number: "5", label: "Technologies" },
+    { number: "8+", label: "Technologies" },
     { number: "100%", label: "Dedication" }
   ]
 };
@@ -33,18 +33,18 @@ export const skills = [
     items: [
       { name: "HTML5", level: 90, icon: "html5" },
       { name: "CSS3", level: 85, icon: "css3" },
-      { name: "JavaScript", level: 80, icon: "javascript" },
-      { name: "React", level: 70, icon: "react" },
-      { name: "Responsive Design", level: 85, icon: "responsive" }
+      { name: "JavaScript", level: 85, icon: "javascript" },
+      { name: "React", level: 80, icon: "react" },
+      { name: "Next.js", level: 75, icon: "nextjs" }
     ]
   },
   {
     category: "Backend & Tools",
     items: [
-      { name: "Python", level: 60, icon: "python" },
-      { name: "Git & GitHub", level: 75, icon: "git" },
-      { name: "VS Code", level: 90, icon: "vscode" },
-      { name: "npm", level: 70, icon: "npm" }
+      { name: "Python", level: 80, icon: "python" },
+      { name: "Django", level: 75, icon: "django" },
+      { name: "Git", level: 85, icon: "git" },
+      { name: "GitHub", level: 85, icon: "github" }
     ]
   }
 ];
