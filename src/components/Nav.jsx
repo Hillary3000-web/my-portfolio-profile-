@@ -1,12 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const links = ['About', 'Projects', 'Infrastructure', 'Contact']
 
 export default function Nav() {
   const [solid, setSolid] = useState(false)
   const [open,  setOpen]  = useState(false)
+  const navRef = useRef(null)
 
   useEffect(() => {
     const h = () => setSolid(window.scrollY > 40)
@@ -14,8 +15,17 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', h)
   }, [])
 
+  useEffect(() => {
+    if (!open) return
+    const handler = e => {
+      if (navRef.current && !navRef.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [open])
+
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${solid ? 'bg-canvas/95 backdrop-blur-sm border-b border-rule' : ''}`}>
+    <header ref={navRef} className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${solid ? 'bg-canvas/95 backdrop-blur-sm border-b border-rule' : ''}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
         <a href="#" className="font-display font-bold text-lg text-ink tracking-tight">
           HCP<span className="text-accent">.</span>

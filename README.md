@@ -105,7 +105,7 @@ Browser → CloudFront (CDN + HTTPS via ACM) → S3 Bucket (static files)
 npm run build
 
 # Sync to S3 (replace with your bucket name)
-aws s3 sync .next/static s3://your-bucket-name --delete
+aws s3 sync out/ s3://your-bucket-name --delete
 
 # Invalidate CloudFront cache
 aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths "/*"

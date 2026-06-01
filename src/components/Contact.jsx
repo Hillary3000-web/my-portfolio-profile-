@@ -18,7 +18,7 @@ export default function Contact() {
     setStatus('sending')
     try {
       // Replace YOUR_FORM_ID after creating a free form at formspree.io
-      const r = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const r = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(form),

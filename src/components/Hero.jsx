@@ -81,6 +81,13 @@ export default function Hero() {
             >
               Contact me
             </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="font-sans font-semibold text-sm text-accent border border-accent px-6 py-3 hover:bg-accent hover:text-canvas transition-colors duration-200"
+            >
+              Resume ↓
+            </a>
           </div>
         </div>
 

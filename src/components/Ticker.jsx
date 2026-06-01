@@ -11,7 +11,7 @@ export default function Ticker() {
   const doubled = [...skills, ...skills]
 
   return (
-    <div className="border-y border-rule py-5 overflow-hidden bg-accent-bg/40 select-none">
+    <div aria-hidden="true" className="border-y border-rule py-5 overflow-hidden bg-accent-bg/40 select-none">
       <div className="ticker-track whitespace-nowrap">
         {doubled.map((s, i) => (
           <span key={i} className="font-mono text-sm text-ink inline-flex items-center">
