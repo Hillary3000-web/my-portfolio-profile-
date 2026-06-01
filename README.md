@@ -1,67 +1,70 @@
 # Hillary Chukwuma Prince — Portfolio
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwind-css)
+![AWS](https://img.shields.io/badge/AWS-S3_+_CloudFront-FF9900?style=for-the-badge&logo=amazon-aws)
 
-## 🚀 About
+Personal portfolio for Hillary Chukwuma Prince — Backend Engineer based in Port Harcourt, Nigeria.
 
-A premium **dark-amber portfolio** built with **Next.js App Router** featuring:
-
-- ✦ **Glitch text** hero animation  
-- ✦ **Custom cursor** with ring follower  
-- ✦ **Scroll-reveal** fade-up animations  
-- ✦ **Infinite tech marquee**  
-- ✦ **Live WAT clock** in the navbar  
-- ✦ **Film grain** overlay  
-- ✦ **Fully responsive** mobile-first layout  
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
-| Framework | Next.js 15 (App Router) |
-| UI | React 19 |
-| Fonts | Google Fonts via `next/font` (Bebas Neue, DM Serif Display, Inconsolata) |
-| Styling | Vanilla CSS with CSS Variables |
-| Animations | Pure CSS keyframes + IntersectionObserver |
-| Deployment | Vercel |
+| Framework | Next.js 14 (App Router, static export) |
+| UI | React 18 |
+| Styling | Tailwind CSS v3 with custom design tokens |
+| Fonts | Syne · Inter · Space Mono via `next/font/google` |
+| Animations | CSS keyframes + Intersection Observer (`useReveal`) |
+| Contact form | Formspree |
+| Deployment | AWS S3 + CloudFront + ACM (HTTPS) |
 
-## 📂 Project Structure
+## Features
+
+- Scroll-reveal fade-up animations on every section
+- Infinite skills marquee ticker
+- Sticky nav that turns solid on scroll with mobile hamburger menu
+- Dark "night" sections alternating with light canvas sections
+- Full SEO: Open Graph, Twitter Cards, JSON-LD structured data, `sitemap.xml`, `robots.txt`
+
+## Project Structure
 
 ```
 my-portfolio-profile-/
-├── app/
+├── src/
+│   ├── app/
+│   │   ├── globals.css          # Tailwind base + reveal animation + ticker keyframes
+│   │   ├── layout.jsx           # Root layout — next/font, Metadata API, JSON-LD
+│   │   ├── page.jsx             # Home page — composes all sections
+│   │   ├── sitemap.js           # Dynamic /sitemap.xml
+│   │   └── robots.js            # Dynamic /robots.txt
 │   ├── components/
-│   │   ├── CustomCursor.jsx     # Animated dot + ring cursor
-│   │   ├── ScrollReveal.jsx     # IntersectionObserver wrapper
-│   │   ├── Navbar.jsx           # Fixed nav with live WAT clock
-│   │   ├── Hero.jsx             # Hero with glitch name effect
-│   │   ├── Marquee.jsx          # Infinite tech stack scroller
-│   │   ├── About.jsx            # Bio + stats grid
-│   │   ├── Skills.jsx           # Skill cards (Backend, DB, Frontend, AI, DevOps)
-│   │   ├── Projects.jsx         # Featured + standard project rows
-│   │   ├── Contact.jsx          # CTA with email, LinkedIn, GitHub
-│   │   └── Footer.jsx           # Copyright footer
-│   ├── globals.css              # Full design system
-│   ├── layout.js                # Root layout with fonts & cursor
-│   └── page.js                  # Home page composition
+│   │   ├── Nav.jsx              # Fixed navbar with mobile hamburger
+│   │   ├── Hero.jsx             # Hero with photo, headline, stat cards
+│   │   ├── About.jsx            # Bio + contact links
+│   │   ├── Ticker.jsx           # Infinite scrolling skills marquee
+│   │   ├── Projects.jsx         # Featured projects + "also built" list
+│   │   ├── Infrastructure.jsx   # AWS architecture walkthrough
+│   │   ├── Contact.jsx          # Formspree contact form + direct links
+│   │   └── Footer.jsx           # Footer
+│   └── hooks/
+│       └── useReveal.js         # Intersection Observer scroll-reveal hook
 ├── public/
-├── next.config.mjs
+│   ├── hillary.jpg              # Profile photo
+│   └── favicon.svg              # SVG favicon
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
 └── package.json
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
-### Prerequisites
-- Node.js 18+
-
-### Installation
+**Prerequisites:** Node.js 18+
 
 ```bash
 # Clone the repository
 git clone https://github.com/Hillary3000-web/my-portfolio-profile-.git
-
-# Navigate to project
 cd my-portfolio-profile-
 
 # Install dependencies
@@ -71,26 +74,52 @@ npm install
 npm run dev
 ```
 
-The app will be available at `http://localhost:3000`
-
-### Build for Production
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ```bash
+# Production build
 npm run build
 npm start
 ```
 
-## 📧 Contact
+## Environment Variables
+
+Create a `.env.local` file in the root:
+
+```env
+# Set this to your real domain once Route 53 is wired up
+# Used by metadata, sitemap.xml, and robots.txt
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+```
+
+## Deployment (AWS)
+
+The site is deployed as a static build to AWS:
+
+```
+Browser → CloudFront (CDN + HTTPS via ACM) → S3 Bucket (static files)
+```
+
+```bash
+# Build static output
+npm run build
+
+# Sync to S3 (replace with your bucket name)
+aws s3 sync .next/static s3://your-bucket-name --delete
+
+# Invalidate CloudFront cache
+aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths "/*"
+```
+
+Custom domain via Route 53 is the planned next step.
+
+## Contact
 
 - **Email**: princehillary813@gmail.com
-- **LinkedIn**: [Chukwuma Hillary](https://www.linkedin.com/in/chukwuma-hillary-318b09337)
+- **LinkedIn**: [chukwuma-hillary](https://linkedin.com/in/chukwuma-hillary-318b09337)
 - **GitHub**: [Hillary3000-web](https://github.com/Hillary3000-web)
 - **Location**: Port Harcourt, Nigeria
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
-Built with ❤️ by Hillary Chukwuma Prince
+Built by Hillary Chukwuma Prince

@@ -1,4 +1,6 @@
-import { useState } from 'react'
+'use client'
+
+import { useState, useEffect, useRef } from 'react'
 import useReveal from '../hooks/useReveal'
 
 const stats = [
@@ -10,6 +12,11 @@ const stats = [
 export default function Hero() {
   const ref = useReveal()
   const [imgLoaded, setImgLoaded] = useState(false)
+  const imgRef = useRef(null)
+
+  useEffect(() => {
+    if (imgRef.current?.complete) setImgLoaded(true)
+  }, [])
 
   return (
     <section ref={ref} className="min-h-screen flex flex-col lg:flex-row overflow-hidden">
@@ -93,6 +100,7 @@ export default function Hero() {
       {/* Right: image (desktop) */}
       <div className="hidden lg:block relative w-[38%] xl:w-[40%] shrink-0">
         <img
+          ref={imgRef}
           src="/hillary.jpg"
           alt="Hillary Chukwuma Prince"
           onLoad={() => setImgLoaded(true)}
