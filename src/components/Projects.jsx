@@ -5,7 +5,7 @@ const featured = [
     num: '01',
     title: 'FlowState',
     tag: 'AI · Productivity',
-    year: '2024',
+    year: '2026',
     desc: 'Built an AI-powered productivity platform end-to-end. Integrated Groq\'s Llama 3.3 70B for intelligent task management, handled the Django backend, PostgreSQL schema, Redis caching layer, and the React frontend.',
     stack: ['React', 'Django', 'Groq / Llama 3.3 70B', 'PostgreSQL', 'Redis'],
     live: 'https://flow-state-liart.vercel.app',
@@ -16,7 +16,7 @@ const featured = [
     num: '02',
     title: 'MediRemit',
     tag: 'Fintech · Healthcare',
-    year: '2024',
+    year: '2026',
     desc: 'Designed and shipped a cross-border healthcare payment platform by myself in one hackathon weekend. No team. Integrated Interswitch\'s payment API, built the Node.js backend and React frontend from scratch, and got it live under deadline pressure.',
     stack: ['Node.js / Express', 'React', 'Supabase', 'Interswitch Checkout API'],
     live: 'https://mediremit-frontend.vercel.app',
@@ -25,7 +25,7 @@ const featured = [
     num: '03',
     title: 'Sentiment Analysis',
     tag: 'ML · NLP',
-    year: '2024',
+    year: '2026',
     desc: 'Implemented and compared three text classification models — Naive Bayes, Logistic Regression, and SVM — with a Flask API serving live predictions. Built for a university ML course but went well beyond what was required.',
     stack: ['Flask', 'Scikit-learn', 'Python', 'NLP'],
     live: 'https://sentiment-analysis-g0cf.onrender.com',
@@ -34,8 +34,8 @@ const featured = [
 ]
 
 const extras = [
-  { title: 'UniHub',        desc: 'Student results portal for FUTO' },
-  { title: 'Sudoku Solver', desc: 'Django + OpenCV / Tesseract' },
+  { title: 'UniHub',        desc: 'Student results portal for FUTO(under development)' },
+  { title: 'Sudoku Solver', desc: 'Django + OpenCV / Tesseract(under development)' },
   { title: 'JungleTrack',   desc: 'Django guide on Gumroad', href: 'https://hillarydev.gumroad.com' },
 ]
 
